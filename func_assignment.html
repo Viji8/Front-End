@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function add(a, b) {
+    return a + b;
+}
+console.log("Addition:", add(5, 3)); 
+
+
+const multiply = function(x, y) {
+    return x * y;
+};
+console.log("Multiplication:", multiply(4, 2)); 
+
+
+const subtract = (p, q) => p - q;
+console.log("Subtraction:", subtract(10, 6)); 
+
+
+
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+console.log(greet("User")); 
+
+
+
+let globalVar = "I'm a global variable";
+
+function Scope() {
+    let localVar = "I'm a local variable";
+    console.log(globalVar); 
+    console.log(localVar);  
+}
+
+Scope();
+console.log(globalVar); 
+
+    </script>
+</body>
+</html>
