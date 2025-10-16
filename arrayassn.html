@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array</title>
+</head>
+<body>
+  <h2>Array Methods in JavaScript</h2>
+
+  <script>
+    let cosmetics = ["Lipstick", "Eyeliner", "Blush","Highlighter"];
+    console.log("Original array:", cosmetics);
+
+    cosmetics.push("eyeshadow");
+    console.log("After push:", cosmetics);
+
+    cosmetics.pop();
+    console.log("After pop:", cosmetics);
+
+    cosmetics.shift();
+    console.log("After shift:", cosmetics);
+
+    cosmetics.unshift("Lipliner");
+    console.log("After unshift:", cosmetics);
+
+   
+    console.log("All elements:");
+    for (let i = 0; i < cosmetics.length; i++) {
+      console.log(cosmetics[i]);
+    }
+  </script>
+</body>
+</html>
