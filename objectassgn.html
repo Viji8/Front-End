@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Assignment</title>
+</head>
+<body>
+    <h2>Employee Information</h2>
+    <p id="info"></p>
+
+    <script>
+        const employee = {
+            Name: "xx",
+            Age: 25,
+            Role: "Developer",
+            Organization: "TCS",
+            Salary: 40000,
+            Location: "Chennai",
+            sayHello: function() {
+                document.getElementById("info").innerHTML =
+                    "Name: " + this.Name + "<br>" +
+                    "Age: " + this.Age + "<br>" +
+                    "Role: " + this.Role + "<br>" +
+                    "Organization: " + this.Organization + "<br>" +
+                    "Salary: " + this.Salary + "<br>" +
+                    "Location: " + this.Location + "<br>";
+            }
+        };
+
+        //accesss object properties
+        console.log("Name:", employee.Name);
+        console.log("Age:", employee.Age);
+        //add new properties
+        employee.Position = "Senior";
+        console.log("Position:", employee.Position);
+        //update an existing property
+        employee.Salary = 50000;
+        console.log("Salary Hike:", employee.Salary);
+        //call a method
+        employee.sayHello();
+        //access newly added property inside html
+        document.getElementById("info").innerHTML += "<br>Position: " + employee.Position;
+    </script>
+</body>
+</html>
