@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback, Promise, Async Example</title>
+</head>
+<body>
+  <h2>JavaScript: Callback, Promise & Async</h2>
+  <p id="output"></p>
+
+  <script>
+    const output = document.getElementById("output");
+    function greetUser(name, callback) {
+      output.innerHTML += `Hello, ${name}!<br>`;
+      callback();
+    }
+
+    greetUser("Viji", () => {
+      output.innerHTML += "Callback executed!<br><br>";
+    });
+    function checkNumber(num) {
+      return new Promise((resolve, reject) => {
+        if (num > 5) {
+          resolve("Number is greater than 5");
+        } else {
+          reject("Number is 5 or less");
+        }
+      });
+    }
+    checkNumber(7)
+      .then((msg) => output.innerHTML += msg + "<br>")
+      .catch((err) => output.innerHTML += err + "<br>");
+
+    
+    async function handleNumber(num) {
+      try {
+        const result = await checkNumber(num);
+        output.innerHTML += result + "<br>";
+      } catch (error) {
+        output.innerHTML += error + "<br>";
+      }
+    }
+
+    handleNumber(3);
+  </script>
+</body>
+</html>
