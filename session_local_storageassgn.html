@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage & SessionStorage Demo</title>
+</head>
+<body>
+  <h2>LocalStorage & SessionStorage Example</h2>
+
+  <h3>LocalStorage</h3>
+  <button onclick="saveLocal()">Save to localStorage</button>
+  <button onclick="getLocal()">Get from localStorage</button>
+  <p id="localOutput"></p>
+
+  <h3>SessionStorage</h3>
+  <button onclick="saveSession()">Save to sessionStorage</button>
+  <button onclick="getSession()">Get from sessionStorage</button>
+  <p id="sessionOutput"></p>
+
+  <script>
+
+    function saveLocal() {
+      localStorage.setItem("username", "Viji");
+      document.getElementById("localOutput").innerText = "Saved: Viji";
+    }
+    function getLocal() {
+      const name = localStorage.getItem("username");
+      document.getElementById("localOutput").innerText = "Retrieved: " + name;
+    }
+    function saveSession() {
+      sessionStorage.setItem("token", "ABC123");
+      document.getElementById("sessionOutput").innerText = "Saved: ABC123";
+    }
+    function getSession() {
+      const token = sessionStorage.getItem("token");
+      document.getElementById("sessionOutput").innerText = "Retrieved: " + token;
+    }
+  </script>
+</body>
+</html>
